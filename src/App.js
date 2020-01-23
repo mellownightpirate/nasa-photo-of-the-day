@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import PhotoCard from "./Components/Photocard";
+import styled from "styled-components";
+
 
 function App() {
   const [apod, setApod] = useState([]);
@@ -12,14 +14,16 @@ function App() {
     setApod(res.data);
   });
   }, []);
+
   return (
     <div className="App">
       <header>
         <h1>NASA PHOTO OF THE DAY</h1>
       </header>
-      <PhotoCard title={apod.title} url={apod.url} explanation={apod.explanation} date={apod.date} /> 
+      <PhotoCard title={apod.title} url={apod.url} explanation={apod.explanation} date={apod.date} copyright={apod.copyright}/> 
     </div>
   );
 }
+
 
 export default App;
