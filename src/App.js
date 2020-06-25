@@ -17,7 +17,7 @@ function App() {
       <header>
         <h1> NASA PHOTO OF THE DAY</h1>
       </header>
-      <Photocard title={apod.title} url={apod.url} explanation={apod.explanation} date={apod.date} />
+      <PhotoCard title={apod.title} url={apod.url} explanation={apod.explanation} date={apod.date} />
     </div>
   );
 }
